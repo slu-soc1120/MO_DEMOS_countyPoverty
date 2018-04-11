@@ -65,12 +65,12 @@ base <- ggplot() +
 
 ## map with white background
 map01 <- base +
-  cp_sequoiaTheme(background = "white")
+  cp_sequoiaTheme(background = "white", map = TRUE)
 
 cp_plotSave(filename = "2016/results/map01-poverty.png", plot = map01, preset = "lg", dpi = 500)
 
 ## map with transparent background
 map02 <- base +
-  cp_sequoiaTheme(background = "transparent")
+  cp_sequoiaTheme(background = "transparent", map = TRUE)
 
 cp_plotSave(filename = "2016/results/map02-poverty.png", plot = map02, preset = "lg", dpi = 500)
