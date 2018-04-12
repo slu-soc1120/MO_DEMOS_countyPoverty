@@ -63,14 +63,16 @@ base <- ggplot() +
     caption = "Data via U.S. Census Bureau \nMap by Christopher Prener, Ph.D."
   ) 
 
+cp_plotSave(filename = "2016/results/povertyMap16-base.png", plot = base, preset = "lg", dpi = 500)
+
 ## map with white background
 map01 <- base +
   cp_sequoiaTheme(background = "white", map = TRUE)
 
-cp_plotSave(filename = "2016/results/map01-poverty.png", plot = map01, preset = "lg", dpi = 500)
+cp_plotSave(filename = "2016/results/povertyMap16-white.png", plot = map01, preset = "lg", dpi = 500)
 
 ## map with transparent background
 map02 <- base +
   cp_sequoiaTheme(background = "transparent", map = TRUE)
 
-cp_plotSave(filename = "2016/results/map02-poverty.png", plot = map02, preset = "lg", dpi = 500)
+cp_plotSave(filename = "2016/results/povertyMap16-trans.png", plot = map02, preset = "lg", dpi = 500)
