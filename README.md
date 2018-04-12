@@ -7,9 +7,10 @@
 [![](https://img.shields.io/github/repo-size/slu-soc1120/MO_DEMOS_countyPoverty.svg)](https://github.com/slu-soc1120/MO_DEMOS_countyPoverty/)
 
 ### Abstract
+This repository contains a map image of counties in Missouri, colored by their 2016 estimated poverty rate. The data was obtained from the U.S. Census Bureau's 2016 5-year American Community Survey estimates. I use this map in two units - teaching about class and also about low birth weight (part of the gender section of the course).
 
 ### Preview
-
+![preview](2016/results/povertyMap16-trans.png)
 
 ## About SOC 1120: Introduction to Sociology - Diversity and Health Emphasis
 ### Course Description
