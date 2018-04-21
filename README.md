@@ -13,6 +13,9 @@ This repository contains a map image of counties in Missouri, colored by their 2
 ### Preview
 ![preview](2016/results/povertyMap16-trans.png)
 
+### Citing These Images
+This repository is associated with a [Digital Object Identifier](https://en.wikipedia.org/wiki/Digital_object_identifier) (or DOI). Please include the DOI when citing these images. You can find pre-formatted citations and a BibTeX entry, among other citation resources, on the associated [Zenodo release page](https://zenodo.org/record/1226404).
+
 ## About SOC 1120: Introduction to Sociology - Diversity and Health Emphasis
 ### Course Description
 This course is a specialized section of Introduction to Sociology offered at [Saint Louis University](http://wwww.slu.edu). It uses health examples to highlight course topics throughout the semester, continually emphasizing the ways in which inequality and the social determinants of health shape American life.
