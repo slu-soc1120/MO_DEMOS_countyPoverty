@@ -40,20 +40,16 @@ moPoverty <- get_acs(geography = "county",  state = "MO", output = "wide", table
 ### subset columns and calculate estimate
 moPoverty %>%
   mutate(pctPoverty = (B17001_002E/B17001_001E)*100) %>%
-  select(GEOID, B17001_001E, B17001_002E, pctPoverty) -> moPoverty
+  select(GEOID, pctPoverty) %>%
+  cp_breaks(var = pctPoverty, newvar = povertyJenks, classes = 5, style = "jenks") -> moPoverty
 
 ### combine spatial and geometric data
 povertyMap <- left_join(moCounties, moPoverty, by = "GEOID")
 
-
-jenks <- classIntervals(povertyMap$pctPoverty, n=5, style="jenks")
-poverty <- cut(povertyMap$pctPoverty, breaks = c(jenks$brks))
-
-
 ## base map
 base <- ggplot() + 
   geom_sf(data = mo, fill = "#ffffff", color = NA) + 
-  geom_sf(data = povertyMap, mapping = aes(fill = poverty), color = NA) +
+  geom_sf(data = povertyMap, mapping = aes(fill = povertyJenks), color = NA) +
   geom_sf(data = mo, fill = NA, color = "#000000", size = .25) +
   scale_fill_brewer(palette = "BuGn", name = "Percent",
     labels = c("6.12 - 11.00", "11.01 - 15.70", "15.71 - 19.90", "19.91 - 24.20", "24.21 - 30.50")) +
